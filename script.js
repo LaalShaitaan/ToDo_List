@@ -2,10 +2,7 @@ var button=document.getElementById("enter");
 var input=document.getElementById("userinput");
 
 var button2=document.getElementById("deletee");
-var deleteme=document.getElementById("userdelete");
 
-
-var ul=document.querySelector("ul")
 
 button.addEventListener("click",function(){
   if(input.value.length>0)
@@ -28,8 +25,10 @@ input.addEventListener("keypress",function(event){
   }
 })
 
+function delete_List()
+{
+  var lis = document.getElementById("listt")
+  lis.removeChild(lis.childNodes([-1]));
+}
 
-var lis = document.querySelectorAll("ul");
-button2.removeEventListener("click",function(){
-  li.parentNode.removeChild([-1]);
-})
+button2.addEventListener("click",delete_List())
